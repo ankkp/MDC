@@ -1,61 +1,5 @@
 {
-    "properties": {
-      "displayName": "Configure Microsoft Defender CSPM to be enabled and 3 subplans",
-      "policyType": "Custom",
-      "mode": "All",
-      "description": "Defender Cloud Security Posture Management (CSPM) provides enhanced posture capabilities and a new intelligent cloud security graph to help identify, prioritize, and reduce risk. Defender CSPM is available in addition to the free foundational security posture capabilities turned on by default in Defender for Cloud.",
-      "metadata": {
-      },
-      "parameters": {
-        "effect": {
-          "type": "String",
-          "metadata": {
-            "displayName": "Effect",
-            "description": "Enable or disable the execution of the policy"
-          },
-          "allowedValues": [
-            "DeployIfNotExists",
-            "Disabled"
-          ],
-          "defaultValue": "DeployIfNotExists"
-        },
-        "SensitiveDataDiscovery": {
-            "type": "String",
-            "metadata": {
-              "displayName": "SensitiveDataDiscovery",
-              "description": "To enabled Sensitive data discovery (preview)"
-            },
-            "allowedValues": [
-                "True",
-                "False"
-              ],
-            "defaultValue": ""
-        },
-        "ContainerRegistriesVulnerabilityAssessments": {
-                "type": "String",
-                "metadata": {
-                  "displayName": "ContainerRegistriesVulnerabilityAssessments",
-                  "description": "To enabled Container registries vulnerability assessments (preview)"
-                },
-                "allowedValues": [
-                    "True",
-                    "False"
-                  ],
-                "defaultValue": ""
-        },
-        "AgentlessDiscoveryForKubernetes": {
-            "type": "String",
-            "metadata": {
-              "displayName": "AgentlessDiscoveryForKubernetes",
-              "description": "To enabled Agentless discovery for Kubernetes (preview)"
-            },
-            "allowedValues": [
-                "True",
-                "False"
-              ],
-            "defaultValue": ""
-            }
-      },
+      "mode": "All",     
     "policyRule": {
       "if": {
         "field": "type",
@@ -117,17 +61,53 @@
       }
     },
     "parameters": {
-      "effect": {
-        "type": "String",
-        "metadata": {
-          "displayName": "Effect",
-          "description": "Enable or disable the execution of the policy"
+        "effect": {
+          "type": "String",
+          "metadata": {
+            "displayName": "Effect",
+            "description": "Enable or disable the execution of the policy"
+          },
+          "allowedValues": [
+            "DeployIfNotExists",
+            "Disabled"
+          ],
+          "defaultValue": "DeployIfNotExists"
         },
-        "allowedValues": [
-          "DeployIfNotExists",
-          "Disabled"
-        ],
-        "defaultValue": "DeployIfNotExists"
+        "SensitiveDataDiscovery": {
+            "type": "String",
+            "metadata": {
+              "displayName": "SensitiveDataDiscovery",
+              "description": "To enabled Sensitive data discovery (preview)"
+            },
+            "allowedValues": [
+                "True",
+                "False"
+              ],
+            "defaultValue": ""
+        },
+        "ContainerRegistriesVulnerabilityAssessments": {
+                "type": "String",
+                "metadata": {
+                  "displayName": "ContainerRegistriesVulnerabilityAssessments",
+                  "description": "To enabled Container registries vulnerability assessments (preview)"
+                },
+                "allowedValues": [
+                    "True",
+                    "False"
+                  ],
+                "defaultValue": ""
+        },
+        "AgentlessDiscoveryForKubernetes": {
+            "type": "String",
+            "metadata": {
+              "displayName": "AgentlessDiscoveryForKubernetes",
+              "description": "To enabled Agentless discovery for Kubernetes (preview)"
+            },
+            "allowedValues": [
+                "True",
+                "False"
+              ],
+            "defaultValue": ""
+            }
       }
-    }
-  }
+}
