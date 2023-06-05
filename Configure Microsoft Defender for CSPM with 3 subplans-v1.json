@@ -1,5 +1,5 @@
 {
-    "mode": "All",     
+  "mode": "All",
   "policyRule": {
     "if": {
       "field": "type",
@@ -58,6 +58,20 @@
           }
         }
       }
+    }
+  },
+  "parameters": {
+    "effect": {
+      "type": "String",
+      "metadata": {
+        "displayName": "Effect",
+        "description": "Enable or disable the execution of the policy"
+      },
+      "allowedValues": [
+        "DeployIfNotExists",
+        "Disabled"
+      ],
+      "defaultValue": "DeployIfNotExists"
     }
   }
 }
